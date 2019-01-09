@@ -21,6 +21,7 @@ namespace Wimo.Core
         {
             task.TaskKey = Helpers.GenerateUniqueKey();
             task.CreatedOn = DateTime.Now;
+            task.Status = TaskStatus.PENDING;
             return _tasksDal.CreateTask(task);
         }
 
@@ -52,7 +53,10 @@ namespace Wimo.Core
 
         public bool UpdateStatus(string taskKey, string status)
         {
-            return _tasksDal.UpdateStatus(taskKey, status);
+            Task task = GetTaskByTaskKey(taskKey);
+            if(task.Status == TaskStatus.PENDING || task.Status == TaskStatus.STARTED)
+                return _tasksDal.UpdateStatus(taskKey, status);
+            return false;
         }
     }
 }

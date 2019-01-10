@@ -1,0 +1,11 @@
+.details-grid
+{
+    overflow-x: hidden;
+    width: 100%;
+}
+.status-panel{
+    margin-left: 300px;
+}
+.status-panel > MenuItem{
+    margin-left: 300px;
+}

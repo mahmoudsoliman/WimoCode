@@ -9,7 +9,7 @@ namespace Wimo.Dal.Interfaces
     {
         IEnumerable<Task> GetTasks();
         Task GetTaskByTaskKey(string taskKey);
-        bool CreateTask(Task task);
+        Task CreateTask(Task task);
         bool UpdateStatus(string taskKey, string status);
         Task DeleteTask(string taskKey);
     }

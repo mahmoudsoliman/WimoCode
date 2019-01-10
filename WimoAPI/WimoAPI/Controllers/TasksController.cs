@@ -37,9 +37,9 @@ namespace WimoAPI.Controllers
 
         // POST: api/Tasks
         [HttpPost]
-        public void Post([FromBody] Task task)
+        public Task Post([FromBody] Task task)
         {
-            _tasksCore.CreateTask(task);
+            return _tasksCore.CreateTask(task);
         }
 
         // PUT: api/Tasks/5

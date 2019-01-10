@@ -9,7 +9,7 @@ namespace Wimo.Core.Interfaces
     {
         IEnumerable<Task> GetTasks(int sortingTypeId = 0);
         Task GetTaskByTaskKey(string taskKey);
-        bool CreateTask(Task task);
+        Task CreateTask(Task task);
         bool UpdateStatus(string taskKey, string status);
         Task DeleteTask(string taskKey);
     }

@@ -16,7 +16,7 @@ namespace Wimo.Dal
             _dbContext = dbContext;
         }
 
-        public bool CreateTask(Task task)
+        public Task CreateTask(Task task)
         {
             _dbContext.Tasks.Add(task);
             try
@@ -26,9 +26,9 @@ namespace Wimo.Dal
             catch (Exception)
             {
 
-                return false;
+                return null;
             }
-            return true;
+            return task;
         }
 
         public Task DeleteTask(string taskKey)

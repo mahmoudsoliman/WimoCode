@@ -17,7 +17,7 @@ namespace Wimo.Core
             _tasksDal = tasksDal;
         }
 
-        public bool CreateTask(Task task)
+        public Task CreateTask(Task task)
         {
             task.TaskKey = Helpers.GenerateUniqueKey();
             task.CreatedOn = DateTime.Now;

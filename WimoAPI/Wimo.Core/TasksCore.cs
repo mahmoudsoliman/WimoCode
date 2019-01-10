@@ -54,9 +54,8 @@ namespace Wimo.Core
         public bool UpdateStatus(string taskKey, string status)
         {
             Task task = GetTaskByTaskKey(taskKey);
-            if(task.Status == TaskStatus.PENDING || task.Status == TaskStatus.STARTED)
-                return _tasksDal.UpdateStatus(taskKey, status);
-            return false;
+            //if(task.Status == TaskStatus.PENDING || task.Status == TaskStatus.STARTED)
+            return _tasksDal.UpdateStatus(taskKey, status);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Wimo.Core.Interfaces;
@@ -10,6 +11,7 @@ namespace WimoAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("MyPolicy")]
     public class TasksController : ControllerBase
     {
         private ITasksCore _tasksCore;
@@ -37,13 +39,14 @@ namespace WimoAPI.Controllers
         [HttpPost]
         public void Post([FromBody] Task task)
         {
+            _tasksCore.CreateTask(task);
         }
 
         // PUT: api/Tasks/5
         [HttpPut("{key}")]
-        public bool Put(string key, [FromBody] string status)
+        public void Put(string key, [FromBody] string status)
         {
-            return _tasksCore.UpdateStatus(key, status);
+             _tasksCore.UpdateStatus(key, status);
         }
 
         // DELETE: api/ApiWithActions/5

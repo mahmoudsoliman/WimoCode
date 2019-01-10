@@ -46,7 +46,7 @@ namespace Wimo.Dal
 
         public IEnumerable<Task> GetTasks()
         {
-            return _dbContext.Tasks.AsEnumerable();
+            return _dbContext.Tasks.ToList();
         }
 
         public bool UpdateStatus(string taskKey, string status)

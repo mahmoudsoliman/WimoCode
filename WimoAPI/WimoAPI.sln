@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wimo.Data", "Wimo.Data\Wimo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wimo.Models", "Wimo.Models\Wimo.Models.csproj", "{46813690-2DBA-4518-8AFC-7C3BFB1C1783}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wimo.Tests", "Wimo.Tests\Wimo.Tests.csproj", "{E8E2D188-0ED5-4D9B-A770-56C1610356E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{46813690-2DBA-4518-8AFC-7C3BFB1C1783}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46813690-2DBA-4518-8AFC-7C3BFB1C1783}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46813690-2DBA-4518-8AFC-7C3BFB1C1783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8E2D188-0ED5-4D9B-A770-56C1610356E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8E2D188-0ED5-4D9B-A770-56C1610356E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8E2D188-0ED5-4D9B-A770-56C1610356E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8E2D188-0ED5-4D9B-A770-56C1610356E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
